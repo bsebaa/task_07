@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for restaurant in restaurants %}
+            <a href="{% url 'restaurant-detail' restaurant.id %}">
+                <ul>
+                    <li>{{restaurant.name}}</li>
+                    <li>{{restaurant.description}}</li>
+                    <li>{{restaurant.opening_time}}</li>
+                    <li>{{restaurant.closing_time}}</li>
+                </ul>
+            </a>
+        {% endfor %}
+{% endblock content %}
